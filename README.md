@@ -1,3 +1,3 @@
-The source code of [the official website of the Gato programming language](https://gato-lang.dev/).
+# The Gato programming language
 
-Hosted on [Cloudflare Pages](https://pages.cloudflare.com/).
+This repository is intended to eventually host the implementation of Gato, but right now it only contains the source code of [the official website of the Gato project](https://gato-lang.dev/), which is hosted on [Cloudflare Pages](https://pages.cloudflare.com/).

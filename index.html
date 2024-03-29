@@ -2,15 +2,43 @@
 <html lang="en">
 <head>
     <title>Gato Programming Language</title>
+    <style>
+        body { font: 16px Verdana,sans-serif; }
+        h1 { font-size: 1.75em; text-align: center; }
+        h2 { font-size: 1.25em; }
+        h3 { font-size: 1em; }
+        h2, h3 { margin: 1.5em 0 .5em; }
+        p { margin: .5em 0 1em; }
+        code { opacity: 60%; }
+        footer { font-size: .9em; margin-top: 2em; opacity: 70%; text-align: center; }
+    </style>
 </head>
-<body style="font: 20px Verdana,sans-serif;">
-    <h1 style="text-align: center;">Gato <small>&mdash; We all deserve good software. And cake. And cats.</small></h1>
-    <p>Gato is a general-purpose programming language.</p>
-    <p>Right now it's still vaporware, but I've been thinking about it for years and I finally started writing a compiler for it in the last days of 2023, so I've settled on a name and reserved some domains.</p>
+<body>
+    <h1>Gato <small>&mdash; We all deserve good software. And cake. And cats.<sup>[1]</sup></small></h1>
+    <p>Gato is a general-purpose programming language being very slowly created by yours truly, <a href="https://github.com/Changaco">Changaco</a>.</p>
+    <p>Right now it's still vaporware, but I've been thinking about it for years and I finally started writing a compiler for it in the last days of 2023, so I've settled on a name and acquired some domains.</p>
     <p>Gato's design prioritizes correctness, efficiency, and productivity.</p>
-    <p><strong>Correctness</strong> meaning that Gato is designed to be better than previous languages at avoiding and mitigating bugs.</p>
+    <p><strong>Correctness</strong> meaning that Gato is designed to prevent or mitigate bugs as much as possible.</p>
     <p><strong>Efficiency</strong> meaning that Gato should facilitate writing software which uses the computing power and memory of the machine it runs on as efficiently as possible. This has multiple implications, including the need to have good support for concurrency and parallelism.</p>
     <p><strong>Productivity</strong> meaning that reading and writing Gato code should be a piece of cake. 🤣 Puns aside, this goal is inseparable from the previous two, as it's about facilitating the creation and maintenance of correct and efficient software. Readability is partly subjective, but Python is widely considered to have good code readability, and Gato's syntax is inspired by Python's.</p>
-    <p>While Rust is advertised as having almost identical qualities, it doesn't have them to the maximum extent possible, because it wasn't designed to. Basically, Rust was an attempt to improve upon C(++), and it did, but Gato aims to be significantly better than Rust (and Python) for as many use cases as possible.</p>
+    <p>While Rust is advertised as having almost identical qualities,<sup>[2]</sup> it doesn't have them to the maximum extent possible, because it wasn't designed to. Basically, Rust was an attempt to improve upon C(++), and it did, but Gato aims to be significantly better than Rust (and Python) for as many use cases as possible.</p>
+    <h2>Questions &amp; Answers</h2>
+    <h3>How can a programming language be safer than Rust?</h3>
+    <p>Relatively easily, as Rust doesn't attempt to mitigate all types of bugs. To give a simple example: Rust isn't designed to detect unintentionally infinite looping, despite the fact that this can crash a program or make it unresponsive, and that it can be quite difficult to debug.<sup>[3]</sup> One of the things a programming language can do to mitigate this type of bug is to provide separate mechanisms for short and long-running loops, and to raise a proper exception if a short loop exceeds its expected maximum number of iterations or run time. Unfortunately, Rust (and Python) followed the tradition of having a <code>while</code> loop keyword which can confusingly be used for both finite and infinite loops. To be fair, Python was created before I was born,<sup>[4]</sup> and Rust was created when I was only beginning to learn programming.<sup>[5]</sup></p>
+    <h3>Couldn't an existing programming language be improved instead of creating a new one?</h3>
+    <p>I'm unaware of a programming language which could realistically be improved to match what I have in mind. For example, making a lot of deep changes to Python would be more difficult than starting from scratch, and the Python language as we currently know it would cease to exist in all but name if those changes were made.</p>
+    <h3>When will Gato be ready to try?</h3>
+    <p>I have no idea.</p>
+    <h3>Can I contribute to or follow the development of this project?</h3>
+    <p>You can watch and star <a href="https://github.com/gato-lang/gato">the gato repository on GitHub</a> or follow <a href="https://github.com/gato-lang/gato/issues/1">the first issue in that repository</a>. There isn't any public code to contribute to yet, but you can message me or <a href="https://github.com/gato-lang/gato/issues/new">open an issue</a> if you have something to say. At this early stage even a simple message saying that you agree with the vision that I've begun to lay out here would be helpful and appreciated.</p>
+    <h2>Footnotes</h2>
+    <ol>
+        <li>If you don't get the puns, take a look at the <a href="https://en.wiktionary.org/wiki/gato">meanings of the word “gato”</a>.</li>
+        <li>On the <a href="https://www.rust-lang.org/">front page of the official Rust website</a>: “Why Rust? Performance, Reliability, Productivity”.</li>
+        <li>See for example the “Challenges encountered” section of the Cloudflare blog post “<a href="https://blog.cloudflare.com/rust-nginx-module/">ROFL with a LOL: rewriting an NGINX module in Rust</a>”.</li>
+        <li>Work on Python began in the late 1980s. Source: <a href="https://python-history.blogspot.com/2009/01/brief-timeline-of-python.html">A Brief Timeline of Python</a>, via Wikipedia.</li>
+        <li>Rust was created in 2006. Source: <a href="https://www.technologyreview.com/2023/02/14/1067869/rust-worlds-fastest-growing-programming-language/">How Rust went from a side project to the world’s most-loved programming language</a>, via Wikipedia. I will spare you and myself by not linking to proof that I was learning PHP at the time.</li>
+    </ol>
+    <footer><p>This page is manually written HTML+CSS and is hosted on <a href="https://pages.cloudflare.com/">Cloudflare Pages</a>.</footer>
 </body>
 </html>
