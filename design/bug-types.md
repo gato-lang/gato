@@ -51,7 +51,7 @@ Envisioned mitigation: the index of the first element in a container is 1, not 0
 
 ## Arithmetic [overflow](https://en.wikipedia.org/wiki/Integer_overflow) and [underflow](https://en.wikipedia.org/wiki/Arithmetic_underflow)
 
-Envisioned solution: an overflow or underflow is an error by default. Wrapping or saturating must be explicitly requested by the programmer. Syntactic sugar is provided to facilitate that. During static analysis, a computation which can be proven not to overflow or underflow is marked as safe. Unconstrainted numerical types, like Python's `int`, are available for use cases when defining limits is deemed undesirable or unnecessary by the programmer.
+Envisioned solution: an overflow or underflow is an error by default. Wrapping or saturating must be explicitly requested by the programmer. Syntactic sugar is provided to facilitate that. During static analysis, a computation which can be proven not to overflow or underflow is marked as safe. Unconstrained numerical types, like Python's `int`, are available for use cases when defining limits is deemed undesirable or unnecessary by the programmer.
 
 ## [Rounding errors](https://en.wikipedia.org/wiki/Round-off_error)
 
