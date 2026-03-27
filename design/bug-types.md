@@ -81,6 +81,10 @@ Envisioned mitigation: the language supports declaring that a function's running
 
 TODO
 
+## [Gotcha](https://en.wikipedia.org/wiki/Gotcha_(programming\))
+
+Envisioned mitigation: same as Python's (`==` is the equality operator, `:=` is the assignment-in-an-expression operator).
+
 ## [ANSI terminal vulnerabilities](https://dgl.cx/2023/09/ansi-terminal-security)
 
 Envisioned mitigation: refuse to print legacy control characters when writing to a terminal, except through functions designed to do it in a safe way. This should prevent programs written in Gato from being abused to transmit an exploit to a terminal.
