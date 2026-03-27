@@ -37,7 +37,7 @@ Envisioned mitigation: the maximum run time of a function can be properly declar
 
 Examples: [Accidentally Quadratic](https://accidentallyquadratic.tumblr.com/). A particularly tricky one was [Rust hash iteration+reinsertion](https://accidentallyquadratic.tumblr.com/post/153545455987/rust-hash-iteration-reinsertion).
 
-Envisioned mitigation: the language supports declaring the costs of a function. The compiler tries its best to detect inconsistencies between the declared and actual costs.
+Envisioned mitigation: the language supports declaring the costs of a function. The compiler tries its best to verify those costs, ideally by both proving them mathematically and [confirming them with measurements](https://theory.stanford.edu/~aiken/publications/papers/fse07.pdf). Tools to measure a function's complexity already exist for other languages ([Python](https://github.com/plasma-umass/bigO/), [Rust](https://docs.rs/bigoish/)).
 
 ## [Division by zero](https://en.wikipedia.org/wiki/Division_by_zero) and other nonsensical mathematical operation (e.g. addition of amounts in different currencies)
 
