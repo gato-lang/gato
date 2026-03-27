@@ -69,7 +69,7 @@ TODO
 
 TODO
 
-## [Deadlock and livelock](https://en.wikipedia.org/wiki/Deadlock_(computer_science\))
+## [Deadlock and livelock](https://en.wikipedia.org/wiki/Deadlock_\(computer_science\))
 
 Envisioned mitigation: encourage the use of APIs that avoid at least one of the conditions necessary to reach a deadlock state. For example, a transaction can avoid deadlocks by safely acquiring all the locks it needs when it begins. This can be achieved by either declaration or automated detection of the needed locks.
 
@@ -81,7 +81,7 @@ Envisioned mitigation: the language supports declaring that a function's running
 
 TODO
 
-## [Gotcha](https://en.wikipedia.org/wiki/Gotcha_(programming\))
+## [Gotcha](https://en.wikipedia.org/wiki/Gotcha_\(programming\))
 
 Envisioned mitigation: same as Python's (`==` is the equality operator, `:=` is the assignment-in-an-expression operator).
 
