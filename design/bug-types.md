@@ -67,11 +67,17 @@ TODO
 
 ## Uncoordinated parallel computing (non-atomic operations on shared resources without locking, a.k.a. [race condition](https://en.wikipedia.org/wiki/Race_condition))
 
-TODO
+A good description of the problem: [Rust Prevents Data Races, Not Race Conditions](https://corrode.dev/blog/rust-prevents-data-races-not-race-conditions/).
+
+Envisioned solution: for every write to shared memory, all shared variables directly or indirectly involved in the write must have been locked since before any of them became involved. This rule is enforced by the compiler. A variable is involved in a write if it can affect the value being written or whether the write happens. A variable is shared if multiple processes/threads/whatevers use it concurrently.
+
+Out of scope: a program implementing writes to shared resources in a way that leaves the compiler unaware that they are shared resources could still have race conditions. This includes any program that unsafely delegates writes to another program like an SQL database.
 
 ## [Deadlock and livelock](https://en.wikipedia.org/wiki/Deadlock_\(computer_science\))
 
-Envisioned mitigation: encourage the use of APIs that avoid at least one of the conditions necessary to reach a deadlock state. For example, a transaction can avoid deadlocks by safely acquiring all the locks it needs when it begins. This can be achieved by either declaration or automated detection of the needed locks.
+Envisioned solution: always avoid at least one of the conditions necessary to reach a deadlock state. For example, a transaction can avoid deadlocks by safely acquiring all the locks it needs when it begins. This can be achieved by either declaration or automated detection of the needed locks.
+
+Out of scope: a program implementing locks in a way that leaves the compiler unaware of them could still end up in a deadlock or livelock. This includes any program that unsafely delegates locking to another program like an SQL database.
 
 ## [Timing attacks](https://en.wikipedia.org/wiki/Timing_attack)
 
