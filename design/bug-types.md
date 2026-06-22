@@ -94,3 +94,7 @@ Envisioned mitigation: same as Python's (`==` is the equality operator, `:=` is 
 ## [ANSI terminal vulnerabilities](https://dgl.cx/2023/09/ansi-terminal-security)
 
 Envisioned mitigation: refuse to print legacy control characters when writing to a terminal, except through functions designed to do it in a safe way. This should prevent programs written in Gato from being abused to transmit an exploit to a terminal.
+
+## [Server-side request forgery](https://en.wikipedia.org/wiki/Server-side_request_forgery)
+
+Envisioned mitigation: outgoing network connections/requests are initiated in different ways that separate them based on whether the destination address should be private or public. If the provided address doesn't meet the expectation, an exception is raised.
